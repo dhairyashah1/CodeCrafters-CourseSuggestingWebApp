@@ -1,10 +1,10 @@
 .content-section {
-    background: white;
+    background-color: white;
     padding: 10px 20px;
     border: 1px solid black;
-    width: 500px;
+    width: 50%;
     margin: 0 auto;
     height: fit-content;
     border-radius: 3px;
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
 }
