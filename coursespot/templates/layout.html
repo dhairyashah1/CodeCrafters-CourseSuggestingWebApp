@@ -33,12 +33,23 @@
                 <li class="nav-item active">
                     <a href="{{ url_for('home') }}" class="nav-link">Home</a>
                 </li>
+
+                {% if current_user.is_authenticated %}
+                <li class="nav-item active">
+                    <a href="{{ url_for('logout') }}" class="nav-link">Logout</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="{{ url_for('account') }}" class="nav-link">Account</a>
+                </li>
+                {% else %}
                 <li class="nav-item active">
                     <a href="{{ url_for('login') }}" class="nav-link">Login</a>
                 </li>
                 <li class="nav-item active">
                     <a href="{{ url_for('register') }}" class="nav-link">Signup</a>
                 </li>
+                {% endif %}
+
                 <li class="nav-item active">
                     <a href="{{ url_for('about') }}" class="nav-link">About</a>
                 </li>
@@ -49,7 +60,7 @@
         </div>
         </div>
     </nav>
-
+    <br>
     <div class="col md-8">
         {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
