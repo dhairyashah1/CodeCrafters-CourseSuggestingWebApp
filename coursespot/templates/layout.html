@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 
-        
+    {% block links %}
+    {% endblock %}
+
+
     {% if title %}
     <title>{{ title }}</title>
     {% else %}
@@ -20,44 +23,44 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
-            <img src="{{ url_for('static', filename='logo.jpg') }}" style="width: 30%; max-width: 30px;">
-        <a href="{{ url_for('home') }}" class="navbar-brand ml-1">Coursespot</a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarid">
-            <span class="navbar-toggler-icon">  </span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarid">
-            <ul class="navbar-nav text-center ml-auto">
-                <li class="nav-item active">
-                    <a href="{{ url_for('home') }}" class="nav-link">Home</a>
-                </li>
+            <a class="navbar-brand" href="{{ url_for('welcome') }}">COURSESPOT</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                    </li>
 
-                {% if current_user.is_authenticated %}
-                <li class="nav-item active">
-                    <a href="{{ url_for('logout') }}" class="nav-link">Logout</a>
-                </li>
-                <li class="nav-item active">
-                    <a href="{{ url_for('account') }}" class="nav-link">Account</a>
-                </li>
-                {% else %}
-                <li class="nav-item active">
-                    <a href="{{ url_for('login') }}" class="nav-link">Login</a>
-                </li>
-                <li class="nav-item active">
-                    <a href="{{ url_for('register') }}" class="nav-link">Signup</a>
-                </li>
-                {% endif %}
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item active">
+                        <a href="{{ url_for('logout') }}" class="nav-link">Logout</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="{{ url_for('account') }}" class="nav-link">Account</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item active">
+                        <a href="{{ url_for('login') }}" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="{{ url_for('register') }}" class="nav-link">Signup</a>
+                    </li>
+                    {% endif %}
 
-                <li class="nav-item active">
-                    <a href="{{ url_for('about') }}" class="nav-link">About</a>
-                </li>
-                <li class="nav-item active">
-                    <a href="{{ url_for('help') }}" class="nav-link">Help</a>
-                </li>
-            </ul>
-        </div>
+                    <li class="nav-item active">
+                        <a href="{{ url_for('about') }}" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="{{ url_for('contact') }}" class="nav-link">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
         </div>
     </nav>
     <br>

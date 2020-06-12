@@ -5,8 +5,6 @@ from coursespot.models import User
 
 
 class RegistrationForm(FlaskForm):
-    firstname = StringField('First Name', validators=[DataRequired(), Length(min=2, max=20)])
-    lastname = StringField('Last Name', validators=[DataRequired(), Length(min=2, max=20)])
     username = StringField('Username', validators=[DataRequired(), Length(min=2, max=20)]) 
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
@@ -29,3 +27,8 @@ class LoginForm(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
     remember = BooleanField('Remember me')
     submit = SubmitField('Login')
+
+
+class ContactForm(FlaskForm):
+    email = StringField('Email', validators=[DataRequired(), Email()]) 
+    message = StringField('Message', validators=[DataRequired(), Length(max=300)])

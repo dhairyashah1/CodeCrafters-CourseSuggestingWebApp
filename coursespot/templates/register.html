@@ -6,37 +6,6 @@
         <form class="form-horizontal" method="POST" action="">
             {{ form.hidden_tag() }}
             <legend class="border-bottom mb-4" style="text-align: center"><h3>Sign Up</h3></legend>
-
-            <div class="form-group">
-                {{ form.firstname.label(class="form-control-label") }}
-                {% if form.firstname.errors %}
-                    {{ form.firstname(class="form-control form-control-md is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.firstname.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                {% else %}
-                    {{ form.firstname(class="form-control form-control-md") }}
-                {% endif %}
-            </div>
-
-
-            <div class="form-group">
-                {{ form.lastname.label(class="form-control-label") }}
-                {% if form.lastname.errors %}
-                    {{ form.lastname(class="form-control form-control-md is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.lastname.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                {% else %}
-                    {{ form.lastname(class="form-control form-control-md") }}
-                {% endif %}
-            </div>
-
-
             <div class="form-group">
                 {{ form.username.label(class="form-control-label") }}
                 {% if form.username.errors %}

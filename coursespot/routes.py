@@ -1,11 +1,16 @@
 from flask import render_template, redirect, url_for, flash, request
 from coursespot import app, db, bcrypt
-from coursespot.forms import RegistrationForm, LoginForm
-from coursespot.models import User
+from coursespot.forms import RegistrationForm, LoginForm, ContactForm
+from coursespot.models import User, Contact
 from flask_login import login_user, current_user, logout_user, login_required
 
 
 @app.route("/")
+def welcome():
+    return render_template("welcome.html", title="Welcome")
+
+
+
 @app.route("/home")
 def home():
     return render_template('home.html')
@@ -63,3 +68,12 @@ def logout():
 @login_required
 def account():
     return render_template("account.html", title="Account")
+
+
+@app.route("/contact", methods=["GET", "POST"])
+def contact():
+    form = ContactForm()
+    contact = Contact(email = form.email.data, message = form.message.data)
+    db.session.add(contact)
+    db.session.commit()
+    return render_template("contact.html", form=form, title="Contact")
