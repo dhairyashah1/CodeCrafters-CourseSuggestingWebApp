@@ -73,7 +73,9 @@ def account():
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     form = ContactForm()
-    contact = Contact(email = form.email.data, message = form.message.data)
-    db.session.add(contact)
-    db.session.commit()
+    if form.validate_on_submit():
+        contact = Contact(email=form.email.data, message=form.message.data)
+        db.session.add(contact)
+        db.session.commit()
+        flash("Message sent successfully!", "success")
     return render_template("contact.html", form=form, title="Contact")

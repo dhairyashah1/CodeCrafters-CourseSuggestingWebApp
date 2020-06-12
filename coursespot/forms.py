@@ -32,3 +32,4 @@ class LoginForm(FlaskForm):
 class ContactForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()]) 
     message = StringField('Message', validators=[DataRequired(), Length(max=300)])
+    submit = SubmitField('Submit')
