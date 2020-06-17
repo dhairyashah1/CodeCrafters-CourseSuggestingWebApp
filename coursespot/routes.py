@@ -1,6 +1,6 @@
 from flask import render_template, redirect, url_for, flash, request
 from coursespot import app, db, bcrypt
-from coursespot.forms import RegistrationForm, LoginForm, ContactForm
+from coursespot.forms import RegistrationForm, LoginForm, ContactForm, UpdateForm
 from coursespot.models import User, Contact
 from flask_login import login_user, current_user, logout_user, login_required
 
@@ -12,6 +12,7 @@ def welcome():
 
 
 @app.route("/home")
+@login_required
 def home():
     return render_template('home.html')
 
@@ -60,15 +61,26 @@ def help():
 @app.route("/logout")
 def logout():
     logout_user()
-    return redirect(url_for('home'))
+    return redirect(url_for('welcome'))
 
-@app.route("/account")
+@app.route("/account", methods=["GET", "POST"])
 @login_required
 def account():
-    return render_template("account.html", title="Account")
+    form=UpdateForm()
+    if form.validate_on_submit():
+        current_user.username=form.username.data
+        current_user.email=form.email.data
+        db.session.commit()
+        flash("Information updated successfully", "success")
+        return redirect(url_for('account'))
+    elif request.method=="GET":
+        form.username.data = current_user.username
+        form.email.data = current_user.email
+    return render_template("account.html", title="Account", form=form)
 
 
 @app.route("/contact", methods=["GET", "POST"])
+@login_required
 def contact():
     form = ContactForm()
     if form.validate_on_submit():
@@ -77,3 +89,29 @@ def contact():
         db.session.commit()
         flash("Message sent successfully!", "success")
     return render_template("contact.html", form=form, title="Contact")
+
+# Routes for courses
+
+@app.route("/astronomy")
+def astronomy():
+    return render_template("astronomy.html")
+
+@app.route("/computerscience")
+def compscience():
+    return render_template("compscience.html")
+
+@app.route("/datascience")
+def datascience():
+    return render_template("datascience.html")
+
+@app.route("/economics")
+def economics():
+    return render_template("economics.html")
+
+@app.route("/maths")
+def maths():
+    return render_template("maths.html")
+
+@app.route("/physics")
+def physics():
+    return render_template("physics.html")
