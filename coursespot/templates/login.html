@@ -10,7 +10,7 @@
             
 
             <div class="form-group">
-                {{ form.email.label(class="form-control-label lead textbox") }}
+                {{ form.email.label(class="form-control-label lead") }}
                 {% if form.email.errors %}
                     {{ form.email(class="form-control form-control-md is-invalid textbox") }}
                         <div class="invalid-feedback">
@@ -25,7 +25,7 @@
 
 
             <div class="form-group">
-                {{ form.password.label(class="form-control-label lead textbox") }}
+                {{ form.password.label(class="form-control-label lead") }}
                 {% if form.password.errors %}
                     {{ form.password(class="form-control form-control-md is-invalid textbox") }}
                         <div class="invalid-feedback">
