@@ -1,4 +1,8 @@
 .content-section {
+<<<<<<< HEAD
+=======
+    background-color:rgb(44, 44, 44);
+>>>>>>> 531aa5a439bc336e0df4b7e6c16bcadfbcd17ea9
     padding: 10px 20px;
     border: 1px solid black;
     width: 50%;
@@ -7,6 +11,7 @@
     border-radius: 3px;
     margin-bottom: 20px;  
     color: white;  
+<<<<<<< HEAD
 }
 .textbox {
     background-color:#292b2c;
@@ -16,6 +21,18 @@ body {
     background-image: url("https://wallpaperset.com/w/full/a/b/1/32954.jpg");
     background-size: cover;
     color: white;
+}
+.home {
+    color: black;
+=======
+>>>>>>> 531aa5a439bc336e0df4b7e6c16bcadfbcd17ea9
+}
+body {
+    background-color: black;
+    color: white;
+}
+.textbox {
+    background-color:rgb(44, 44, 44);
 }
 .home {
     color: black;
