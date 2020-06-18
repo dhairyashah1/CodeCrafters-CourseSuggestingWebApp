@@ -1,10 +1,21 @@
 .content-section {
-    background-color: white;
+    background-color:rgb(44, 44, 44);
     padding: 10px 20px;
     border: 1px solid black;
     width: 50%;
     margin: 0 auto;
     height: fit-content;
     border-radius: 3px;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;  
+    color: white;  
+}
+body {
+    background-color: black;
+    color: white;
+}
+.textbox {
+    background-color:rgb(44, 44, 44);
+}
+.home {
+    color: black;
 }

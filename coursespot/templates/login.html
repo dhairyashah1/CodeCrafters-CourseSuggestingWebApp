@@ -9,31 +9,31 @@
             
 
             <div class="form-group">
-                {{ form.email.label(class="form-control-label lead") }}
+                {{ form.email.label(class="form-control-label lead textbox") }}
                 {% if form.email.errors %}
-                    {{ form.email(class="form-control form-control-md is-invalid") }}
+                    {{ form.email(class="form-control form-control-md is-invalid textbox") }}
                         <div class="invalid-feedback">
                             {% for error in form.email.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                 {% else %}
-                    {{ form.email(class="form-control form-control-md") }}
+                    {{ form.email(class="form-control form-control-md textbox") }}
                 {% endif %}    
             </div>
 
 
             <div class="form-group">
-                {{ form.password.label(class="form-control-label lead") }}
+                {{ form.password.label(class="form-control-label lead textbox") }}
                 {% if form.password.errors %}
-                    {{ form.password(class="form-control form-control-md is-invalid") }}
+                    {{ form.password(class="form-control form-control-md is-invalid textbox") }}
                         <div class="invalid-feedback">
                             {% for error in form.password.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                 {% else %}
-                    {{ form.password(class="form-control form-control-md") }}
+                    {{ form.password(class="form-control form-control-md textbox") }}
                 {% endif %}
             </div>
 
