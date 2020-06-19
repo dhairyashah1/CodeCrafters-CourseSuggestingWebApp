@@ -2,24 +2,15 @@
 
 {% block content %}
 <div class="container">
-    <h1>Account Info</h1>
-    <div class="border border-dark p-3 rounded">
+    <h1 class="display-4">Account Info</h1>
+    <div>
         <p class="lead"><strong>Username</strong> : {{ current_user.username }}
             <br>
             <strong>Email</strong> : {{ current_user.email }}
         </p>
     </div>
     <br>
-    <h1>Starred Topics</h1>
-    <div class="border border-dark p-3 rounded">
-        <p class="lead">
-            Computer Science<br>
-            Data Science<br>
-            Economics<br>
-        </p>
-    </div>
-    <br>
-    <h1>Update Profile</h1>
+    <h1 class="display-4">Update Profile</h1>
     <div class="border border-dark p-3 mb-3 rounded bg-dark">
         <form method="POST" action="">
             {{ form.hidden_tag() }}

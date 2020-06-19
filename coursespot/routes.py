@@ -88,6 +88,8 @@ def contact():
         db.session.add(contact)
         db.session.commit()
         flash("Message sent successfully!", "success")
+    elif request.method=="GET":
+        form.email.data = current_user.email
     return render_template("contact.html", form=form, title="Contact")
 
 # Routes for courses
