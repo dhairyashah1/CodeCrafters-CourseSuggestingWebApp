@@ -14,7 +14,7 @@ def welcome():
 @app.route("/home")
 @login_required
 def home():
-    return render_template('home.html')
+    return render_template('home.html', home='active')
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
@@ -32,7 +32,7 @@ def register():
         db.session.commit()
         flash("Account created successfully. You can now login", "success")
         return redirect(url_for('login'))
-    return render_template('register.html', title="Register", form=form)
+    return render_template('register.html', title="Register", form=form, signup="active")
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
@@ -47,16 +47,12 @@ def login():
             return redirect(next_page) if next_page else redirect(url_for('home'))
         else:
             flash("Login unsuccessful. Please check your email and password", "danger")
-    return render_template('login.html', title="Login", form=form)  
+    return render_template('login.html', title="Login", form=form, login="active")  
 
 
 @app.route("/about")
 def about():
-    return render_template("about.html", title="About")
-
-@app.route("/help")
-def help():
-    return render_template("help.html", title="Help")
+    return render_template("about.html", title="About", about="active")
 
 @app.route("/logout")
 def logout():
@@ -76,7 +72,7 @@ def account():
     elif request.method=="GET":
         form.username.data = current_user.username
         form.email.data = current_user.email
-    return render_template("account.html", title="Account", form=form)
+    return render_template("account.html", title="Account", form=form, account="active")
 
 
 @app.route("/contact", methods=["GET", "POST"])
@@ -90,7 +86,7 @@ def contact():
         flash("Message sent successfully!", "success")
     elif request.method=="GET":
         form.email.data = current_user.email
-    return render_template("contact.html", form=form, title="Contact")
+    return render_template("contact.html", form=form, title="Contact", contact="active")
 
 # Routes for courses
 
