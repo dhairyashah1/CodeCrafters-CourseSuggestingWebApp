@@ -1,75 +1,94 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<body class="home">
-    <!-- Page Heading -->
-    <h1 class="my-4 display-2" style="color: white;">Explore Topics</h1>
 
-    <div class="row">
-        <div class="col-lg-4 col-sm-6 mb-4">
-            <div class="card h-100">
-                <a href="{{ url_for('astronomy') }}"><img class="card-img-top" src="https://astronomy.com/~/media/D9505152D60F4BC78E5E24BF3F7765A6.jpg" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="{{ url_for('astronomy') }}">Astronomy</a>
-                    </h4>
-                    <p class="card-text lead">Man must rise above the Earth—to the top of the atmosphere and beyond—for only thus will he fully understand the world in which he lives</p>
-                </div>
+<body class="home">
+  <div class="breadcrumbs">
+    <h2><b>COURSE DOMAINS</b></h2>
+  </div>
+  <section id="courses" class="courses bg-dark">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+        <div class="colorbgcard card p-4 md:w-1/3 col-lg-4 col-md-6 d-flex">
+          <div class="h-full border-2 view rounded-lg overflow-hidden">
+            <a href="{{ url_for('compscience') }}"><img class="height lg:h-24 md:h-12 object-cover object-center card-img "
+                src="https://wallpapertag.com/wallpaper/full/d/2/3/143272-top-computer-science-wallpaper-1920x1200.jpg"
+                alt="blog"></a>
+            <br>
+            <div>
+              <h2 class="title-font card-footer view text-lg font-medium text-white mb-3 "><b><a
+                    href="{{ url_for('compscience') }}">COMPUTER SCIENCE</a></b></h2>
             </div>
+          </div>
         </div>
-        <div class="col-lg-4 col-sm-6 mb-4">
-            <div class="card h-100">
-                <a href="{{ url_for('compscience') }}"><img class="card-img-top" src="https://itbrief.com.au/uploads/story/2018/11/26/ThinkstockPhotos-1054955998.jpg" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="{{ url_for('compscience') }}">Computer Science</a>
-                    </h4>
-                    <p class="card-text lead">Computer Science is a science of abstraction -creating the right model for a problem and devising the appropriate mechanizable techniques to solve it.</p>
-                </div>
+
+        <div class="colorbgcard card p-4 md:w-1/3 col-lg-4 col-md-6 d-flex">
+          <div class="h-full border-2 view rounded-lg overflow-hidden">
+            <a href="{{ url_for('datascience') }}"><img class="height lg:h-24 md:h-12 object-cover object-center card-img "
+                src="https://i.pinimg.com/originals/9c/53/f0/9c53f0204667720487e72a3612906252.jpg" alt="blog"></a>
+            <br>
+            <div>
+              <h2 class="title-font card-footer view text-lg font-medium text-white mb-3 "><b><a
+                    href="{{ url_for('datascience') }}">DATA SCIENCE</a></b></h2>
             </div>
+          </div>
         </div>
-        <div class="col-lg-4 col-sm-6 mb-4">
-            <div class="card h-100">
-                <a href="{{ url_for('datascience') }}"><img class="card-img-top" src="https://datascience.wisc.edu/wp-content/themes/uw-theme-child-datascience/dist/images/data-science-twitter.jpg" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="{{ url_for('datascience') }}">Data Science</a>
-                    </h4>
-                    <p class="card-text lead">Data scientists are involved with gathering data, massaging it into a tractable form, making it tell its story, and presenting that story to others..</p>
-                </div>
+
+        <div class="colorbgcard card p-4 md:w-1/3 col-lg-4 col-md-6 d-flex">
+          <div class="h-full border-2 view rounded-lg overflow-hidden">
+            <a href="{{ url_for('economics') }}"><img class="height lg:h-24 md:h-12 object-cover object-center card-img "
+                src="https://il4.picdn.net/shutterstock/videos/975622/thumb/1.jpg" alt="blog"></a>
+            <br>
+            <div>
+              <h2 class="title-font card-footer view text-lg font-medium text-white mb-3 "><b><a
+                    href="{{ url_for('economics') }}">ECONOMICS</a></b></h2>
             </div>
+          </div>
         </div>
-        <div class="col-lg-4 col-sm-6 mb-4">
-            <div class="card h-100">
-                <a href="{{ url_for('economics') }}"><img class="card-img-top" src="https://www.yu.edu/sites/default/files/Economics-538811846.jpg" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="{{ url_for('economics') }}">Economics</a>
-                    </h4>
-                    <p class="card-text lead">Economics provides us a systematic framework for analyzing, researching, writing, and teaching about a wide array financial and regional economic issues</p>
-                </div>
+
+        <div class="colorbgcard card p-4 md:w-1/3 col-lg-4 col-md-6 d-flex">
+          <div class="h-full border-2 view rounded-lg overflow-hidden">
+            <a href="{{ url_for('maths') }}"><img class="height lg:h-24 md:h-12 object-cover object-center card-img "
+                src="https://wallpapertag.com/wallpaper/full/7/9/d/677815-cool-math-backgrounds-1920x1200-for-ipad.jpg"
+                alt="blog"></a>
+            <br>
+            <div>
+              <h2 class="title-font card-footer view text-lg font-medium text-white mb-3 "><b><a
+                    href="{{ url_for('maths') }}">MATH</a></b></h2>
             </div>
+          </div>
         </div>
-        <div class="col-lg-4 col-sm-6 mb-4">
-            <div class="card h-100">
-                <a href="{{ url_for('maths') }}"><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSw7s9aNJsHPmwD-vj-FVfOe6niDVshU9eENmecdRtOQ0QqmbRm&usqp=CAU" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="{{ url_for('maths') }}">Maths</a>
-                    </h4>
-                    <p class="card-text lead">Without mathematics, there’s nothing you can do. Everything around you is mathematics. Everything around you is numbers.</p>
-                </div>
+
+        <div class="colorbgcard card p-4 md:w-1/3 col-lg-4 col-md-6 d-flex">
+          <div class="h-full border-2 view rounded-lg overflow-hidden">
+            <a href="{{ url_for('physics') }}"><img class="height lg:h-24 md:h-12 object-cover object-center card-img "
+                src="https://wallpapercave.com/wp/wp2166403.jpg" alt="blog"></a>
+            <br>
+            <div>
+              <h2 class="title-font card-footer view text-lg font-medium text-white mb-3 "><b><a
+                    href="{{ url_for('physics') }}">PHYSICS</a></b></h2>
             </div>
+          </div>
         </div>
-        <div class="col-lg-4 col-sm-6 mb-4">
-            <div class="card h-100">
-                <a href="{{ url_for('physics') }}"><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfy9Sox0Y-wjpeG5UeomLv5vLxNoauAkiya606MeBObg0GFhE2&usqp=CAU alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="{{ url_for('physics') }}">Physics</a>
-                    </h4>
-                    <p class="card-text lead">It is the nature of physics to hear the loudest of mouths over the most comprehensive ones.</p>
-                </div>
+
+        <div class="colorbgcard card p-4 md:w-1/3 col-lg-4 col-md-6 d-flex">
+          <div class="h-full border-2 view rounded-lg overflow-hidden">
+            <a href="{{ url_for('astronomy') }}"><img class="height lg:h-24 md:h-12 object-cover object-center card-img "
+                src="https://i.ytimg.com/vi/b23tkzpCm-M/maxresdefault.jpg" alt="blog"></a>
+            <br>
+            <div>
+              <h2 class="title-font card-footer view text-lg font-medium text-white mb-3 "><b><a
+                    href="{{ url_for('astronomy') }}">ASTRONOMY</a></b></h2>
             </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
 </body>
 {% endblock %}

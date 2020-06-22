@@ -1,7 +1,10 @@
 {% extends 'layout.html' %}
 {% block content %}
+<div class="breadcrumbs">
+    <h2><b>REGISTER</b></h2>
+</div>
 <br>
-<body class="forms">
+<body class="forms" style="background-color: #171a1d;">
     <div class="content-section bg-dark">
         <form class="form-horizontal" method="POST" action="">
             {{ form.hidden_tag() }}
@@ -67,7 +70,7 @@
 
 
             <div class="form-group">
-                {{ form.submit(class="btn btn-outline-info") }}
+                {{ form.submit(class="btn btn-outline-success") }}
             </div>
 
         </form>

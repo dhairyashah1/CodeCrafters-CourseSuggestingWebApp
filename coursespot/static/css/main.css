@@ -12,20 +12,16 @@
     background-color:#292b2c;
     color: white;
 }
-body {
-    background-image: url("https://wallpaperset.com/w/full/a/b/1/32954.jpg");
-    background-size: cover;
-    color: white;
-}
+
 .home {
     color: black;
 }
 body {
-    background-color: black;
+    background-color: #171a1d;
     color: white;
 }
 .textbox {
-    background-color:rgb(44, 44, 44);
+    background-color: #171a1d;
 }
 .home {
     color: black;

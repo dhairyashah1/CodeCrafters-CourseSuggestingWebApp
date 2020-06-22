@@ -1,14 +1,14 @@
 {% extends 'layout.html' %}
 
 {% block content %}
+<div class="breadcrumbs">
+    <h2><b>LOGIN</b></h2>
+</div>
 <br>
-<body class="forms">
+<body class="forms style="background-color: #171a1d;>
     <div class="content-section bg-dark">
         <form class="form-horizontal" method="POST" action="">
             {{ form.hidden_tag() }}
-            <legend class="border-bottom mb-4" style="text-align: center"><h3>Login</h3></legend>
-            
-
             <div class="form-group">
                 {{ form.email.label(class="form-control-label lead") }}
                 {% if form.email.errors %}
@@ -45,7 +45,7 @@
             </div>
 
             <div class="form-group">
-                {{ form.submit(class="btn btn-outline-info") }}
+                {{ form.submit(class="btn btn-outline-success") }}
             </div>
     
         </form>

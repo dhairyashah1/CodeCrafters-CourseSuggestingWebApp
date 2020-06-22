@@ -1,9 +1,5 @@
 {% extends 'layout.html' %}
 
-{% block links %}
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/welcome.css')}}">
-{% endblock %}
-
 {% block content %}
 <header>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -37,7 +33,7 @@
 </header>
 
 <!-- Page Content -->
-<section class="py-5">
+<section class="py-5"  style="background-color: #171a1d;">
     <div class="container">
         <h1 class="display-4">Start Learning</h1>
         <p class="lead">Explore courses on your favourite topics. <a href="{{ url_for('register') }}">Sign Up</a></p>

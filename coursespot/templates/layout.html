@@ -1,78 +1,219 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Mentor Bootstrap Template - Index</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <!-- Favicons -->
+    <link href="{{url_for('static',filename='assets/img/favicon.png')}}" rel="icon">
+    <link href="{{url_for('static',filename='assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
-    {% block links %}
-    {% endblock %}
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
+    <!-- Vendor CSS Files -->
+    <link href="{{url_for('static',filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}"
+        rel="stylesheet">
+    <link href="{{url_for('static',filename='assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='assets/vendor/aos/aos.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style rel="stylesheet" type="text/css">
+      .colorgreen{
+        color: #3ac162;
+      }
 
-    {% if title %}
-    <title>{{ title }}</title>
-    {% else %}
-    <title>CourseSpot</title>
-    {% endif %}
+      .colorpurple{
+          color: #6610f2;
+          text-decoration: underline;
+          text-decoration-color: #6610f2;
+      }
+      .colororange{
+          color:orange;
+      }
+      .height{
+          height:260px;
+      }
+      .colorbgcard{
+          border: solid;
+          border-width: 1px;
+          background-color: #171a1d;
+          border-color: #6610f2;
+          border-radius: 7px;
+      }
+
+      img:hover{
+          border: 2px solid orange;
+      }
+
+    </style>
+    <!-- Template Main CSS File -->
+    <link href="{{url_for('static',filename='assets/css/style.css')}}" rel="stylesheet">
+
+    <link href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/welcome.css')}}">
+
+    <!-- =======================================================
+  * Template Name: Mentor - v2.0.0
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+<body class="bg-">
+    <header id="header" class="bg-dark">
+        <div class="container d-flex align-items-center colorbgcard ">
+
+            <h1 class="logo mr-auto"><a href="{{ url_for('welcome') }}">CourseSpot</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav class="nav-menu d-none d-lg-block">
+                {% if current_user.is_authenticated %}
+                <ul>
+                    <li class="{{ home }}"><a href="{{ url_for('home') }}">Home</a></li>
+                    <li class="{{ about }}"><a href="{{ url_for('about') }}">About</a></li>
+                    <li class="drop-down "><a href="#">Course Topics</a>
+                        <ul>
+                            <!--href is as per route function name-->
+                            <li><a href="{{ url_for('compscience') }}">Computer Science</a></li>
+                            <li><a href="{{ url_for('datascience') }}">Data Science</a></li>
+                            <li><a href="{{ url_for('economics') }}">Economics</a></li>
+                            <li><a href="{{ url_for('physics') }}">Physics</a></li>
+                            <li><a href="{{ url_for('maths') }}">Math</a></li>
+                            <li ><a href="{{ url_for('astronomy') }}">Astronomy</a></li>
+                        </ul>
+                    </li>
+                    <li class="{{ account }}"><a href="{{ url_for('account') }}">Account</a></li>
+                    <li class="{{ contact }}"><a href="{{ url_for('contact') }}">Contact</a></li>
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                </ul>
+                {% else %}
+                <ul>
+                    <li class="{{ login }}"><a href="{{ url_for('login') }}">Login</a></li>
+                    <li class="{{ signup }}"><a href="{{ url_for('register') }}">Register</a></li>
+                </ul>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    {% block content %}  {% endblock %}
+    
+    <footer id="footer">
+    
+    <div class="footer-top">
         <div class="container">
-            <a class="navbar-brand" href="{{ url_for('welcome') }}">COURSESPOT</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <div class="navbar-nav ml-auto" id="navlinks">
-                        <a class="nav-link {{ home }}" href="{{ url_for('home') }}">Home</a>
-                    {% if current_user.is_authenticated %}
-                        <a href="{{ url_for('logout') }}" class="nav-link">Logout</a>
-                        <a href="{{ url_for('account') }}" class="nav-link {{ account }}">Account</a>
-                    {% else %}
-                        <a href="{{ url_for('login') }}" class="nav-link {{ login }}">Login</a>
-                        <a href="{{ url_for('register') }}" class="nav-link {{ signup }}">Signup</a>
-                    {% endif %}
-                        <a href="{{ url_for('about') }}" class="nav-link {{ about }}">About</a>
-                        <a href="{{ url_for('contact') }}" class="nav-link {{ contact }}">Contact</a>
+            <div class="row">
+    
+                <div class="col-lg-4 col-md-6 footer-contact">
+                    <h2 >CourseSpot</h2>
+                    <p>
+                        CodeCrafters <br>
+                        Community of Coders <br>
+                        Technical Department<br>
+                        VJTI Mumbai<br><br>
+                        <strong>Phone:</strong> +91 8169068634<br>
+                        <strong>Email:</strong> codecrafters.vjti@gmail.com<br>
+                    </p>
                 </div>
+    
+                <div class="col-lg-4 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-lg-4 col-md-6 footer-links">
+                    <h4>Our Offerings</h4>
+                    <ul>
+                        <!--href is as per route function name-->
+                        <li><a href="{{ url_for('compscience') }}">Computer Science</a></li>
+                        <li><a href="{{ url_for('datascience') }}">Data Science</a></li>
+                        <li><a href="{{ url_for('economics') }}">Economics</a></li>
+                        <li><a href="{{ url_for('physics') }}">Physics</a></li>
+                        <li><a href="{{ url_for('maths') }}">Math</a></li>
+                        <li ><a href="{{ url_for('astronomy') }}">Astronomy</a></li>
+                    </ul>
+                </div>
+    
+               <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <h4>Join Our Newsletter</h4>
+                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                    <form action="" method="post">
+                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                    </form>
+                </div> -->
+    
             </div>
         </div>
-    </nav>
-    <br>
-    <div class="col md-8">
-        {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-        {% for category, message in messages %}
-        <div class="alert alert-{{ category }}">
-            {{ message }}
-        </div>
-        {% endfor %}
-        {% endif %}
-        {% endwith %}
-
-        {% block content %}
-        {% endblock %}
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-</body>
-
-</html>
+    
+    <div class="container d-md-flex py-4">
+    
+        <div class="mr-md-auto text-center text-md-left">
+            <div class="copyright">
+                &copy; Copyright <strong><span>CourseSpot</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+                Designed by <a href="https://bootstrapmade.com/">CodeCrafters</a>
+            </div>
+        </div>
+        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+    </div>
+    </footer><!-- End Footer -->
+    
+    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+    <div id="preloader"></div>
+    
+    <!-- Vendor JS Files -->
+    <script src="{{url_for('static',filename='assets/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/vendor/php-email-form/validate.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/vendor/waypoints/jquery.waypoints.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/vendor/counterup/counterup.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/vendor/aos/aos.js')}}"></script>
+    
+    <!-- Template Main JS File -->
+    <script src="{{url_for('static',filename='assets/js/main.js')}}"></script>
+    
+    </body>
+    
+    </html>
