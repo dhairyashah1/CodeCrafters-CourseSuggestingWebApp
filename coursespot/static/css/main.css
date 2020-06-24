@@ -1,0 +1,28 @@
+.content-section {
+    padding: 10px 20px;
+    border: 1px solid black;
+    width: 50%;
+    margin: 0 auto;
+    height: fit-content;
+    border-radius: 3px;
+    margin-bottom: 20px;  
+    color: white;  
+}
+.textbox {
+    background-color:#292b2c;
+    color: white;
+}
+
+.home {
+    color: black;
+}
+body {
+    background-color: #171a1d;
+    color: white;
+}
+.textbox {
+    background-color: #171a1d;
+}
+.home {
+    color: black;
+}
