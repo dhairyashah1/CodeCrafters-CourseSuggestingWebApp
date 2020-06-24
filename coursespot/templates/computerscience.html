@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block content %}
+<main id="main" data-aos="fade-in">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+        <div class="container text-dark ">
+            <h2><b>COMPUTER-SCIENCE COURSES</b></h2>
+            <p>
+            <h4>Reveal the Software Expert in you and get ready for a flight! Discover the best Computer Science Courses
+                here. </h4>
+            </p>
+        </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Courses Section ======= -->
+    <section id="courses" class="courses bg-dark">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+
+                {% for i in range(50) %}
+
+
+                <div class="colorbgcard card p-4 md:w-1/3 col-lg-4 col-md-6 d-flex">
+                    <div class="h-full border-2 view rounded-lg overflow-hidden">
+                        {% if i>18 %}
+                        <img class="height lg:h-24 md:h-12 object-cover object-center card-img "
+                            src={{ comp_img[i%18] }} alt="blog">
+                        {% else %}
+                        <img class="height lg:h-24 md:h-12 object-cover object-center card-img " src={{ comp_img[i] }}
+                            alt="blog">
+                        {% endif %}
+                        <div class="card-header ">
+                            <h5 class="title-font text-success">{{course_dict_0[i][1]}}</h5>
+                        </div>
+
+                        <h3 class="title-font card-text view text-lg font-medium text-white mb-3 ">
+                            <b>{{course_dict_0[i][0]}}</b></h3>
+                        {% for links in course_dict_0[i][2] %}
+
+                        <div class="card-footer ">
+                            <code
+                                class="text-nowrap col-2"><button type="button" class="btn btn-link btn-sm pull-left btn-outline-success row " ><a class="colororange"  href={{links}}><i class="fa fa-search"></i></a></button>&nbsp;{{ links }}</code>
+                        </div>
+                        {% endfor %}
+
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+            </div>
+        </div>
+    </section><!-- End Courses Section -->
+    <ul class="pagination align-content-center justify-content-center bg-dark btn-group-md">
+        <li class="active"><button class="btn btn-outline-success active" type="button"><a
+                    href="{{ url_for('compscience') }}">1</a></button></li>
+        <li><button type="button" class="btn btn-outline-success"><a href="{{ url_for('compscience2') }}">2</a></button>
+        </li>
+        <li><button type="button" class="btn btn-outline-success"><a href="{{ url_for('compscience3') }}">3</a></button>
+        </li>
+        <li><button type="button" class="btn btn-outline-success"><a href="{{ url_for('compscience4') }}">4</a></button>
+        </li>
+    </ul>
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+{% endblock %}

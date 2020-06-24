@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <!-- Slide One - Set the background image for this slide in the line below -->
+            <div class="carousel-item active" style="background-image: url('https://wallpaperaccess.com/full/314799.jpg')">
+            </div>
+            <!-- Slide Two - Set the background image for this slide in the line below -->
+            <div class="carousel-item"
+                style="background-image: url('https://news.yale.edu/sites/default/files/styles/featured_media/public/adobestock_257957753_ynews.jpeg?itok=I9HGiWNW&c=07307e7d6a991172b9f808eb83b18804')">
+            </div>
+            <!-- Slide Three - Set the background image for this slide in the line below -->
+            <div class="carousel-item"
+                style="background-image: url('https://undark.org/wp-content/uploads/2019/05/space.jpg')">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</header>
+
+<!-- Page Content -->
+<section class="py-5"  style="background-color: #171a1d;">
+    <div class="container">
+        <h1 class="display-4">Start Learning</h1>
+        <p class="lead">Explore courses on your favourite topics. <a href="{{ url_for('register') }}">Sign Up</a></p>
+    </div>
+</section>
+{% endblock %}
