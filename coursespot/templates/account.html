@@ -12,11 +12,11 @@
         </div>
       </div>
         <nav class="side-menu">
-        				<ul class="nav">
-        					<li class="active"><a href="{{ url_for('account') }}"><span class="fa fa-user"></span> __Profile__ </a></li>
-        					<li><a href="{{ url_for('saved_courses') }}"><span class="fa fa-bookmark"></span> __Saved Courses__ </a></li>
-        				</ul>
-        			</nav>
+        	<ul class="nav">
+        		<li class="active"><a href="{{ url_for('account') }}"><span class="fa fa-user"></span> __Profile__ </a></li>
+        		<li><a href="{{ url_for('saved_courses') }}"><span class="fa fa-bookmark"></span> __Saved Courses__ </a></li>
+        	</ul>
+        </nav>
         <form method="POST" action="" enctype="multipart/form-data">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
