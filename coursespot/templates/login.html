@@ -6,7 +6,7 @@
 </div>
 <br>
 <body class="forms style="background-color: #171a1d;>
-    <div class="content-section bg-dark">
+    <div class="container py-2 bg-dark">
         <form class="form-horizontal" method="POST" action="">
             {{ form.hidden_tag() }}
             <div class="form-group">
@@ -56,8 +56,9 @@
             <small class="text-muted">
                 Need An Account? <a class="ml-2" href="{{ url_for('register') }}">Sign Up Now</a>
             </small>
-
         </div>
+        <br>
     </div>
 </body>
+<br>
 {% endblock %}

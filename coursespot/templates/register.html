@@ -5,10 +5,9 @@
 </div>
 <br>
 <body class="forms" style="background-color: #171a1d;">
-    <div class="content-section bg-dark">
+    <div class="container bg-dark">
         <form class="form-horizontal" method="POST" action="">
             {{ form.hidden_tag() }}
-            <legend class="border-bottom mb-4" style="text-align: center"><h3>Sign Up</h3></legend>
             <div class="form-group">
                 {{ form.username.label(class="form-control-label lead") }}
                 {% if form.username.errors %}
@@ -79,6 +78,8 @@
                 Already have an Account? <a class="ml-2" href="{{ url_for('login') }}">Login</a>
             </small>
         </div>
+        <br>
     </div>
 </body>
+<br>
 {% endblock %}

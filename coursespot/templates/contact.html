@@ -2,7 +2,7 @@
 
 {% block content %}
 <br>
-    <div class="content-section bg-dark">
+    <div class="container bg-dark">
         <form class="form-horizontal" method="POST" action="">
             {{ form.hidden_tag() }}
             <legend class="border-bottom mb-4" style="text-align: center"><h3>Contact Us</h3></legend>
@@ -20,7 +20,8 @@
         <div class="form-group">
             {{ form.submit(class="btn btn-outline-success") }}
         </div>
-
         </form>
-    </div> 
+        <br>
+    </div>
+<br> 
 {% endblock %}
