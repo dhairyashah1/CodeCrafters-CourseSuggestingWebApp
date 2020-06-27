@@ -240,39 +240,48 @@ def contact():
 # Routes for courses
 
 @app.route("/astronomy")
+@login_required
 def astronomy():
     return render_template("astronomy.html",course_dict_5=course_dict[5],x=len(course_dict[5]),astro_img=astro_img, title="Astronomy")
 
 @app.route("/computerscience")
+@login_required
 def compscience():
     return render_template('computerscience.html',course_dict_0=course_dict[0],j=0,x=len(course_dict[0]),comp_img=comp_img, title="Computer Science")
 
 @app.route("/computerscience2")
+@login_required
 def compscience2():
     return render_template('computerscience2.html',course_dict_0=course_dict[0],j=0,x=len(course_dict[0]),comp_img=comp_img, title="Computer Science")
 
 @app.route("/computerscience3")
+@login_required
 def compscience3():
     return render_template('computerscience3.html',course_dict_0=course_dict[0],j=0,x=len(course_dict[0]),comp_img=comp_img, title="Computer Science")
 
 @app.route("/computerscience4")
+@login_required
 def compscience4():
     return render_template('computerscience4.html',course_dict_0=course_dict[0],j=0,x=len(course_dict[0]),comp_img=comp_img, title="Computer Science")
 
 
 @app.route("/datascience")
+@login_required
 def datascience():
     return render_template("datascience.html",course_dict_1=course_dict[1],x=len(course_dict[1]),data_img=data_img, title="Data Science")
 
 @app.route("/economics")
+@login_required
 def economics():
     return render_template("economics.html",course_dict_2=course_dict[2],x=len(course_dict[2]),eco_img=eco_img, title="Economics")
 
 @app.route("/maths")
+@login_required
 def maths():
     return render_template("math.html",course_dict_3=course_dict[3],x=len(course_dict[3]),math_img=math_img, title="Maths")
 
 @app.route("/physics")
+@login_required
 def physics():
     return render_template("physics.html",course_dict_4=course_dict[4],x=len(course_dict[4]),phy_img=phy_img, title="Physics")
 
@@ -285,7 +294,7 @@ def team():
 def send_reset_email(user):
     token = user.get_reset_token()
     msg = Message('Password Reset Request',
-                  sender='sender@email.com',
+                  sender='coursespotcoc@gmail.com',
                   recipients=[user.email])
     msg.body = f'''To reset your password, visit the following link:
 {url_for('reset_token', token=token, _external=True)}
@@ -324,3 +333,7 @@ def reset_token(token):
         return redirect(url_for('login'))
     return render_template('reset_token.html', title='Reset Password', form=form)
 
+
+@app.route('/account/saved_courses')
+def saved_courses() :
+    return render_template('saved_courses.html',title = 'Saved Courese')
