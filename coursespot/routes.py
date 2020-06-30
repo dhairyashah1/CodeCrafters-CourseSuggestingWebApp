@@ -57,6 +57,7 @@ astro_img = ["https://i.ytimg.com/vi/RsMIxZU0CTc/maxresdefault.jpg",
              "https://i.ytimg.com/vi/BmGpRj-KQ18/maxresdefault.jpg",
              "https://i.ytimg.com/vi/z0d4aS1nY64/maxresdefault.jpg",
              "https://www.jpl.nasa.gov/spaceimages/images/wallpaper/PIA15817-1920x1200.jpg"]
+
 comp_img=["https://i.ytimg.com/vi/SzJ46YA_RaA/maxresdefault.jpg",
           "http://www.marywood.edu/academics/majors_minors/images/computerscience.jpg",
           "https://cdn2.tnwcdn.com/wp-content/blogs.dir/1/files/2016/04/Computer_Science_2.jpg",
@@ -76,6 +77,7 @@ comp_img=["https://i.ytimg.com/vi/SzJ46YA_RaA/maxresdefault.jpg",
           "https://static.kent.ac.uk/nexus/ems/50.jpg",
           "https://study.com/cimages/course-image/computer-science-310-current-trends-in-computer-science-it_1167935_large.jpeg",
           "https://www.eschoolnews.com/files/2016/08/computer-science.jpg"]
+
 data_img=["https://miro.medium.com/max/4424/1*QGWyxDaFhavZa495eJBO9Q.jpeg",
           "https://news.nus.edu.sg/sites/default/files/resources/highlights/2017/2017-03/govtech/govtech-1.jpg",
           "https://www.dataquest.io/wp-content/uploads/2019/05/what-is-data-science.jpg",
@@ -95,6 +97,7 @@ data_img=["https://miro.medium.com/max/4424/1*QGWyxDaFhavZa495eJBO9Q.jpeg",
           "https://cdn-images-1.medium.com/max/1200/1*eDZkMx3ewFG9bim7lXE_-Q.jpeg",
           "https://portfortune.files.wordpress.com/2015/10/data-scientist.jpg",
           "https://specials-images.forbesimg.com/imageserve/5cb4c35731358e5bca37eccf/960x0.jpg?fit=scale"]
+
 eco_img=["http://cla.umn.edu/sites/cla.umn.edu/files/hero-images/istock_82653119-hero.jpg",
           "https://www.investopedia.com/thmb/OVTqjYDkFALwRnM1jZUdoZoKa2k=/980x503/filters:fill(auto,1)/Economics-ee66b8ad3f654cb2814dadc1eda2654d.jpg",
           "https://www.urban.org/sites/default/files/styles/optimized_default/public/gettyimages-878164042_cropped.jpg?itok=NU_1wn9S",
@@ -114,6 +117,7 @@ eco_img=["http://cla.umn.edu/sites/cla.umn.edu/files/hero-images/istock_82653119
           "https://www.york.ac.uk/media/study/courses/undergraduate/economics/EconomicsEconometricsHero.jpg",
           "https://www.stoodnt.com/blog/wp-content/uploads/2018/11/Economics-Careers-and-Jobs-in-India.jpg",
           "http://www.exeter.ac.uk/media/universityofexeter/postgraduatewebsite/images/coursetoppanels/economics/financial_economics.jpg"]
+
 phy_img=["https://media4.s-nbcnews.com/j/newscms/2018_22/2451826/180601-atomi-mn-1540_f415a90a9f0fcbddc7dfa4cc7b5a36c3.nbcnews-fp-1200-630.jpg",
           "https://astronomy.com/~/media/437760FF58D7484988985250FD1437FD.jpg",
           "https://news.ufl.edu/media/newsufledu/images/2017/08/physics.jpg",
@@ -133,6 +137,7 @@ phy_img=["https://media4.s-nbcnews.com/j/newscms/2018_22/2451826/180601-atomi-mn
           "https://3c1703fe8d.site.internapcdn.net/newman/csz/news/800/2019/3-quantumphysi.jpg",
           "https://content.ool.co.uk/wp-content/uploads/electricity-physics-igcs.jpg",
          "https://cdn.theatlantic.com/assets/media/img/mt/2016/06/shutterstock_98983550/lead_720_405.jpg?mod=1533691829"]
+
 math_img=["https://www.championtutor.com/blog/wp-content/uploads/2017/11/When-to-Get-a-Maths-Tutor-for-Your-Child.jpg",
           "https://news.schoolsdo.org/wp-content/uploads/2016/02/algebra_geometry_chalk.jpg",
           "https://i.ytimg.com/vi/uMO95_YlEKM/maxresdefault.jpg",
@@ -159,11 +164,11 @@ def welcome():
     return render_template("welcome.html", title="Welcome")
 
 
-
 @app.route("/home")
 @login_required
 def home():
     return render_template('home.html', home='active', title="Home")
+
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
@@ -182,6 +187,7 @@ def register():
         flash("Account created successfully. You can now login", "success")
         return redirect(url_for('login'))
     return render_template('register.html', title="Register", form=form, signup="active")
+
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
@@ -203,10 +209,12 @@ def login():
 def about():
     return render_template("about.html", title="About", about="active")
 
+
 @app.route("/logout")
 def logout():
     logout_user()
     return redirect(url_for('welcome'))
+
 
 @app.route("/account", methods=["GET", "POST"])
 @login_required
@@ -237,27 +245,31 @@ def contact():
         form.email.data = current_user.email
     return render_template("contact.html", form=form, title="Contact", contact="active")
 
-# Routes for courses
 
+# Routes for courses
 @app.route("/astronomy")
 @login_required
 def astronomy():
     return render_template("astronomy.html",course_dict_5=course_dict[5],x=len(course_dict[5]),astro_img=astro_img, title="Astronomy")
+
 
 @app.route("/computerscience")
 @login_required
 def compscience():
     return render_template('computerscience.html',course_dict_0=course_dict[0],j=0,x=len(course_dict[0]),comp_img=comp_img, title="Computer Science")
 
+
 @app.route("/computerscience2")
 @login_required
 def compscience2():
     return render_template('computerscience2.html',course_dict_0=course_dict[0],j=0,x=len(course_dict[0]),comp_img=comp_img, title="Computer Science")
 
+
 @app.route("/computerscience3")
 @login_required
 def compscience3():
     return render_template('computerscience3.html',course_dict_0=course_dict[0],j=0,x=len(course_dict[0]),comp_img=comp_img, title="Computer Science")
+
 
 @app.route("/computerscience4")
 @login_required
@@ -270,15 +282,18 @@ def compscience4():
 def datascience():
     return render_template("datascience.html",course_dict_1=course_dict[1],x=len(course_dict[1]),data_img=data_img, title="Data Science")
 
+
 @app.route("/economics")
 @login_required
 def economics():
     return render_template("economics.html",course_dict_2=course_dict[2],x=len(course_dict[2]),eco_img=eco_img, title="Economics")
 
+
 @app.route("/maths")
 @login_required
 def maths():
     return render_template("math.html",course_dict_3=course_dict[3],x=len(course_dict[3]),math_img=math_img, title="Maths")
+
 
 @app.route("/physics")
 @login_required
@@ -290,6 +305,7 @@ def physics():
 @app.route("/team")
 def team():
     return render_template("team.html", title="Team")
+
 
 def send_reset_email(user):
     token = user.get_reset_token()
@@ -332,8 +348,3 @@ def reset_token(token):
         flash('Your password has been updated! You are now able to log in', 'success')
         return redirect(url_for('login'))
     return render_template('reset_token.html', title='Reset Password', form=form)
-
-
-@app.route('/account/saved_courses')
-def saved_courses() :
-    return render_template('saved_courses.html',title = 'Saved Courese')
