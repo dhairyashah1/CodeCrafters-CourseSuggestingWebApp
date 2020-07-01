@@ -1,42 +1,5 @@
 {% extends "layout.html" %}
 {% block content %}
-
-<!-- ======= Header ======= -->
-<header id="header" class="fixed-top bg-dark">
-    <div class="container d-flex align-items-center colorbgcard ">
-
-        <h1 class="logo mr-auto"><a href="index.html">CourseSpot</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-        <nav class="nav-menu d-none d-lg-block ">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li class="drop-down active"><a href="#">Course Topics</a>
-                    <ul>
-                        <!--href is as per route function name-->
-                        <li class="active"><a href="ComputerScience">Computer Science</a></li>
-                        <li><a href="DataScience">Data Science</a></li>
-                        <li><a href="Economics">Economics</a></li>
-                        <li><a href="Physics">Physics</a></li>
-                        <li><a href="Math">Math</a></li>
-                        <li><a href="Astronomy">Astronomy</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
-
-            </ul>
-        </nav><!-- .nav-menu -->
-
-        <a href="" class="get-started-btn">Logout</a>
-
-    </div>
-</header><!-- End Header -->
-
-<main id="main" data-aos="fade-in">
-
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
         <div class="container text-dark ">
@@ -51,13 +14,8 @@
     <!-- ======= Courses Section ======= -->
     <section id="courses" class="courses bg-dark">
         <div class="container" data-aos="fade-up">
-
             <div class="row" data-aos="zoom-in" data-aos-delay="100">
-
-
                 {% for i in range(51,100) %}
-
-
                 <div class="colorbgcard card p-4 md:w-1/3 col-lg-4 col-md-6 d-flex">
                     <div class="h-full border-2 view rounded-lg overflow-hidden">
                         {% if i>18 %}
@@ -74,18 +32,13 @@
                         <h3 class="title-font card-text view text-lg font-medium text-white mb-3 ">
                             <b>{{course_dict_0[i][0]}}</b></h3>
                         {% for links in course_dict_0[i][2] %}
-
                         <div class="card-footer ">
                             <code
                                 class="text-nowrap col-2"><button type="button" class="btn btn-link btn-sm pull-left btn-outline-success row " ><a class="colororange"  href={{links}}><i class="fa fa-search"></i></a></button>&nbsp;{{ links }}</code>
                         </div>
                         {% endfor %}
-
-
                     </div>
-
                 </div>
-
                 {% endfor %}
             </div>
         </div>
@@ -100,7 +53,5 @@
         <li><button type="button" class="btn btn-outline-success"><a href="{{ url_for('compscience4') }}">4</a></button>
         </li>
     </ul>
-</main><!-- End #main -->
-
-<!-- ======= Footer ======= -->
+</main>
 {% endblock %}

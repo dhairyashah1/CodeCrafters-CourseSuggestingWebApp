@@ -2,10 +2,12 @@
 
 {% block content %}
 <br>
-    <div class="container bg-dark">
-        <form class="form-horizontal" method="POST" action="">
-            {{ form.hidden_tag() }}
-            <legend class="border-bottom mb-4" style="text-align: center"><h3>Contact Us</h3></legend>
+<div class="container bg-dark">
+    <form class="form-horizontal" method="POST" action="">
+        {{ form.hidden_tag() }}
+        <legend class="border-bottom mb-4" style="text-align: center">
+            <h3>Contact Us</h3>
+        </legend>
 
         <div class="form-group">
             {{ form.email.label(class="form-control-label lead") }}
@@ -20,8 +22,8 @@
         <div class="form-group">
             {{ form.submit(class="btn btn-outline-success") }}
         </div>
-        </form>
-        <br>
-    </div>
-<br> 
+    </form>
+    <br>
+</div>
+<br>
 {% endblock %}
