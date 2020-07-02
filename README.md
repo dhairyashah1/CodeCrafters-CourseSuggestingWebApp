@@ -34,7 +34,7 @@ This web app will show you some of the best courses available on various platfor
 Along with this, add the link of the drive folder that contains the app APK/Screenshots/Screen Recordings. If you have hosted your project on the web, add that link as well.
 
 * GitHub repo link: [Link to repository](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp)
-* Drive link: [Drive link1 here](https://drive.google.com/file/d/1ZHcTog-5BTn41gTJkB6yAp1o6ARrfOn-/view?usp=sharing)[ Drive link2 here](https://drive.google.com/file/d/1ZHcTog-5BTn41gTJkB6yAp1o6ARrfOn-/view?usp=sharing)
+* Drive link: [Drive link1 here](https://drive.google.com/file/d/1ZHcTog-5BTn41gTJkB6yAp1o6ARrfOn-/view?usp=sharing)[    Drive link2 here](https://drive.google.com/drive/u/0/folders/11ZygWwlG1CyXw21BoLEJtoPIwAiDEAda)
 * Website link: [Website link here](https://coursespot.herokuapp.com)
 
 ## Technology stack
