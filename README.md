@@ -67,9 +67,10 @@ After cloning the repository, navigate to it in your local machine using command
 >Using ML and AI further our recommendations will become user specific. Suggestions based on star ratings from various sites is one of them. Also the number of course domains and courses may increase enabling the user to find everything at one place. 
 
 ## Screenshots
-Add a few screenshots here to give the viewer a quick idea of what your project looks like. After all, a picture speaks a thousand words.
+>Here are some screenshots of your web app.
+![CourseSpot_4](https://drive.google.com/file/d/1KTPlbvd7-ngKrC-JQCQdTqz2ewVnhZYV/view?usp=sharing)
+![CourseSpot_5](https://drive.google.com/file/d/1M8E4B_cHqWCpW5_7CfwnKPoZ_6ph-S4C/view?usp=sharing)
+![CourseSpot_6](https://drive.google.com/file/d/13vTfiCR6xgJgm8qD7W-EPdsFAq3hrUMT/view?usp=sharing)
+![CourseSpot_7](https://drive.google.com/file/d/1ToJmSXwubURkaxhyu7g0niqr3YjymxYb/view?usp=sharing)
 
-You'll have to link the screenshots from your drive folder here.
-
-![Screenshot alt text](https://edtimes.in/wp-content/uploads/2018/09/NikeMeme10-640x633.jpg "Here is a screenshot")
 
