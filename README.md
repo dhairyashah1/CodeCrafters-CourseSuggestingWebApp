@@ -68,9 +68,9 @@ After cloning the repository, navigate to it in your local machine using command
 
 ## Screenshots
 >Here are some screenshots of your web app.
-![CourseSpot_4](https://drive.google.com/file/d/1KTPlbvd7-ngKrC-JQCQdTqz2ewVnhZYV/view?usp=sharing)
-![CourseSpot_5](https://drive.google.com/file/d/1M8E4B_cHqWCpW5_7CfwnKPoZ_6ph-S4C/view?usp=sharing)
-![CourseSpot_6](https://drive.google.com/file/d/13vTfiCR6xgJgm8qD7W-EPdsFAq3hrUMT/view?usp=sharing)
-![CourseSpot_7](https://drive.google.com/file/d/1ToJmSXwubURkaxhyu7g0niqr3YjymxYb/view?usp=sharing)
+![CourseSpot_4](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/tree/master/coursespot/screenshots/CourseSpot_4.PNG)
+![CourseSpot_5](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/tree/master/coursespot/screenshots/CourseSpot_5.PNG)
+![CourseSpot_6](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/tree/master/coursespot/screenshots/CourseSpot_6.PNG)
+![CourseSpot_7](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/tree/master/coursespot/screenshots/CourseSpot_7.PNG)
 
 
