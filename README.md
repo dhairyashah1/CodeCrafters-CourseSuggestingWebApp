@@ -44,7 +44,7 @@ Tools and technologies used in the project.
 1. Python - Backend
 2. HTML/CSS/JS/Bootstrap - Frontend
 3. Flask - Python Framework
-4. Node.js - JavaScript Framework
+4. WebScrapping - using bs4 library
 
 ## Recommendations
 >The virtualenv required for this project is already included in the repository. But if you want to create a different virtual environment then the required dependencies are included in 'requirements.txt' file.
