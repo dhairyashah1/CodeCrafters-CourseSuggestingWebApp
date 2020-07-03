@@ -1,5 +1,3 @@
-# *CodeCrafters-CourseSuggestingWebApp*
-
 # __Course Suggesting WebApp__
 
 ### Team name: CodeCrafters
