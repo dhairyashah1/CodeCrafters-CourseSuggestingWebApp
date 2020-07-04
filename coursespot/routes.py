@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for, flash, request
 from coursespot import app, db, bcrypt,mail
 from coursespot.forms import RegistrationForm, LoginForm, ContactForm, UpdateForm, RequestResetForm, ResetPasswordForm
-from coursespot.models import User, Contact
+from coursespot.models import User
 from flask_login import login_user, current_user, logout_user, login_required
 from flask_mail import Message
 
@@ -237,9 +237,15 @@ def account():
 def contact():
     form = ContactForm()
     if form.validate_on_submit():
-        contact = Contact(email=form.email.data, message=form.message.data)
-        db.session.add(contact)
-        db.session.commit()
+        msg = Message('Contact',
+                  sender='coursespotcoc@gmail.com',
+                  recipients=['tusharsb12@outlook.com'])
+        msg.body = f'''
+        Feedback received from {form.email.data}
+        Message :
+        {form.message.data}
+'''
+        mail.send(msg)
         flash("Message sent successfully!", "success")
     elif request.method=="GET":
         form.email.data = current_user.email
