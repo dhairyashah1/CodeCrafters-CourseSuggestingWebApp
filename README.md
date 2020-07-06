@@ -129,7 +129,7 @@ On the terminal enter
 
 ## Screenshots
 >Here are some screenshots of your web app.
-![**CourseSpot_4**](https://drive.google.com/file/d/12OlqpVgh_ydn9Tl4n8lA5Z-zNFuD7bUR/view?usp=sharing)
-![**CourseSpot_5**](https://drive.google.com/file/d/1GuzlgWpWBHAc_Q11LP8mmev08T04b46U/view?usp=sharing)
-![**CourseSpot_6**](https://drive.google.com/file/d/1oYcdukhUpUo-LcmdAVg-NWCzhnv2r9bS/view?usp=sharing)
-![**CourseSpot_7**](https://drive.google.com/file/d/1E0CbIZ7Sg22-J8bXgc9IuopvwmK6jW_H/view?usp=sharing)
+![**CourseSpot_4**](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/blob/master/coursespot/screenshots/CourseSpot_4.PNG)
+![**CourseSpot_5**](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/blob/master/coursespot/screenshots/CourseSpot_5.PNG)
+![**CourseSpot_6**](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/blob/master/coursespot/screenshots/CourseSpot_6.PNG)
+![**CourseSpot_7**](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/blob/master/coursespot/screenshots/CourseSpot_7.PNG)
