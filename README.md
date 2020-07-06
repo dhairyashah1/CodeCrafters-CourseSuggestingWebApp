@@ -129,7 +129,6 @@ On the terminal enter
 
 ## Screenshots
 >Here are some screenshots of your web app.
-<img src="https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/tree/master/coursespot/screenshots/CourseSpot_4.png" width="1000px" height="600px">
 ![CourseSpot_4](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/tree/master/coursespot/screenshots/CourseSpot_4.png =400x)
 ![**CourseSpot_5**](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/tree/master/coursespot/screenshots/CourseSpot_5.PNG)
 ![**CourseSpot_6**](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/tree/master/coursespot/screenshots/CourseSpot_6.PNG)
