@@ -130,6 +130,6 @@ On the terminal enter
 ## Screenshots
 >Here are some screenshots of your web app.
 ![CourseSpot_4](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/tree/master/coursespot/screenshots/CourseSpot_4.PNG)
-![**CourseSpot_5**](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/tree/master/coursespot/screenshots/CourseSpot_5.PNG)
+![**CourseSpot_5**](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/coursespot/screenshots/CourseSpot_5.PNG)
 ![**CourseSpot_6**](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/tree/master/coursespot/screenshots/CourseSpot_6.PNG)
 ![**CourseSpot_7**](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/tree/master/coursespot/screenshots/CourseSpot_7.PNG)
