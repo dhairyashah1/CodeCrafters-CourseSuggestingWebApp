@@ -2,16 +2,6 @@
 
 ## Team name: CodeCrafters
 
-## Team members
-* [Dhairya Shah](https://github.com/dhairyashah1) - dhairyashah110501@gmail.com
-* [Tushar Bauskar](https://github.com/tusharb12-hash) - tusharsb8@gmail.com
-* [Prathamesh Tagore](https://github.com/meshtag) - prathameshtagore@gmail.com
-* [Utsav Khatu](https://github.com/utsavk28) - utsavkhatu416@gmail.com
-
-## Mentors
-* [Gaurav Sharma](https://github.com/Leovaldez42)
-* [Devanshi Shah](https://github.com/Devanshi1500)
-* [Hrim Gandhi](https://github.com/hrimG)
 
 ## Description
 There are so many online educational platforms offering courses on various topics. It becomes a tedious task to go to each site and search for courses. COURSESPOT is a web app that shows most of the courses available on internet of various domains. These domains include
@@ -123,6 +113,7 @@ On the terminal enter
 ## Applications
 >The Course Suggesting Web App suggests courses available in various domains from across many websites offering them.
 
+
 ## Future scope
 * Using ML and AI further our recommendations will become user specific. Suggestions based on star ratings from various sites is one of them. Also the number of course domains and courses may increase enabling the user to find everything at one place.
 * Also blogging feature will enable the users to write educational blogs, thus making it a fully educational site.
@@ -136,3 +127,14 @@ On the terminal enter
 ![**CourseSpot_6**](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/blob/master/coursespot/screenshots/CourseSpot_6.PNG)
 ![**CourseSpot_7**](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/blob/master/coursespot/screenshots/CourseSpot_7.PNG)
 ![**CourseSpot_8**](https://github.com/dhairyashah1/CodeCrafters-CourseSuggestingWebApp/blob/master/coursespot/screenshots/CourseSpot_8.PNG)
+
+## Created By 
+* [Dhairya Shah](https://github.com/dhairyashah1) - dhairyashah110501@gmail.com
+* [Tushar Bauskar](https://github.com/tusharb12-hash) - tusharsb8@gmail.com
+* [Prathamesh Tagore](https://github.com/meshtag) - prathameshtagore@gmail.com
+* [Utsav Khatu](https://github.com/utsavk28) - utsavkhatu416@gmail.com
+
+## Mentors
+* [Gaurav Sharma](https://github.com/Leovaldez42)
+* [Devanshi Shah](https://github.com/Devanshi1500)
+* [Hrim Gandhi](https://github.com/hrimG)
